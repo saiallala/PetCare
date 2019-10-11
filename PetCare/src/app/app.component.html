@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <title></title>
-</head>
-<body style = "background: darkblue;">
-<h1 style = "color: red; text-align: center;">PetCare</h1>
+<div style = "background: darkblue;">
+<h1 style = "color:red; text-align: center;">PetCare</h1>
   <!-- NavBar for the Whole Application -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark nav-bag-color">
     <a class="navbar-brand" routerLink = "/" >PetCare</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -40,9 +33,10 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
-
+</nav>
 
   <router-outlet></router-outlet>
+
   <!-- Home Page -->
   <!-- <app-home> </app-home> -->
 
@@ -53,8 +47,10 @@
   <!-- <app-account></app-account> -->
 
   <!-- Profile -->
+  <div style = "background: grey">
   <footer class="page-footer font-small">
-
+<div class="container">
+    <br>
           <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-light">Links</h5>
 
           <ul class="list-unstyled">
@@ -78,6 +74,7 @@
     <div class="footer-copyright text-center py-3 text-light">© 2019 Copyright:
       <a href="https://techwaves.home.blog"> techWaves.com</a>
     </div>
+    </div>
     <!-- Copyright -->
   </footer>
-</body>
+</div>

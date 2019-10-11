@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.nav-bag-color{
+    background-color: darkblue;
+}
+
+h1{
+    color:white;
+}
+
+h3{
+    color: white;
+}
+
+label{
+    color: white;
+}

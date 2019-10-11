@@ -9,7 +9,6 @@ import { AccountComponent } from './account/account.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HelpComponent } from './help/help.component';
 import { Routes,RouterModule } from '@angular/router';
-import { PersonalComponent } from './profile/personal/personal.component';
 import { HealthComponent } from './profile/health/health.component';
 import { ContactInfoComponent } from './profile/contact-info/contact-info.component';
 import {FormsModule} from '@angular/forms';
@@ -41,7 +40,7 @@ const appRoutes: Routes =[
     HealthComponent,
     ContactInfoComponent,
     ViewAccountComponent,
-    CreateAccountComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,
