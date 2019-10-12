@@ -25,7 +25,7 @@ const appRoutes: Routes =[
         { path: 'viewAccount', component: ViewAccountComponent },
         { path: 'createAccount', component: CreateAccountComponent },
         { path: 'health', component: HealthComponent },
-        { path: 'contact', component: ContactComponent }
+        { path: 'contact', component: ContactInfoComponent }
 
 ];
 

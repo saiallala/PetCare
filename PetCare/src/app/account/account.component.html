@@ -1,23 +1,25 @@
-
-  <h1>Account Information</h1>
-  <div class="container" style="background: white;">
-    <div class="row">
-      <div class="col-sm-6">
-        <img src= "../assets/kitten.png"
-        height = 100px
-        alt ="kitten">
-        <br>
-        <br>
-
-        <a class="btn btn-success" routerLink="/createAccount"> Create an Account</a>
-      </div>
-      <div class="col-sm-6">
-          <img src='../assets/husky.png'
-          height = 100px
-          alt="husky">
-          <br>
-          <br>
-        <a class="btn btn-warning" routerLink="/viewAccount"> View an Account</a>
-      </div>
+<h1>Account Information</h1>
+<div class="container" style="background: lightblue;">
+  <div class="row">
+      <div class="col-sm-3">
+            <img src="../assets/giraffe.png"
+            height=900px
+            width = 400px
+            alt="giraffe"><br>
     </div>
-  </div>
+    <div class="col-sm-4 account">
+      <a class="btn" routerLink="/createAccount">
+          <img src="../assets/kitten.png" height=300px alt="kitten">
+          <a class="btn btn-success">Create an Account</a>
+      </a>
+    </div>
+
+      <div class="col-sm-4 account">
+        <a class="btn" routerLink="/viewAccount">
+            <img src="../assets/dog.png" height=300px alt="husky"><br>
+            <a class="btn btn-warning">View Your Account</a>
+        </a>
+    </div>
+
+ </div>
+</div>
