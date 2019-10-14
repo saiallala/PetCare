@@ -16,8 +16,8 @@ export class PetService {
     return this.http.get<Pet[]>('//localhost:8080/petcare/pets/');
   }
 
-  public findById(): Observable<Pet[]>{
-      return this.http.get<Pet[]>('//localhost:8080/petcare/pets/1')
+  public findById(): Observable<Pet>{
+      return this.http.get<Pet>('http://localhost:8080/petcare/pets/1')
   }
 
   public save(Pet: Pet) {
