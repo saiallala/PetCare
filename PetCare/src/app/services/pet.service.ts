@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Pet } from '../model/pet';
 import { Observable } from 'rxjs';
 
@@ -8,17 +8,19 @@ import { Observable } from 'rxjs';
 })
 export class PetService {
 
-  private petsUrl: string;
 
   constructor(private http: HttpClient) {
-    this.petsUrl = 'http://localhost:8080/pets';
   }
 
   public findAll(): Observable<Pet[]> {
-    return this.http.get<Pet[]>(this.petsUrl);
+    return this.http.get<Pet[]>('//localhost:8080/petcare/pets/');
+  }
+
+  public findById(): Observable<Pet[]>{
+      return this.http.get<Pet[]>('//localhost:8080/petcare/pets/1')
   }
 
   public save(Pet: Pet) {
-    return this.http.post<Pet>(this.petsUrl, Pet);
+    return this.http.post<Pet>('//localhost:8080/petcare/pets', Pet);
   }
 }
