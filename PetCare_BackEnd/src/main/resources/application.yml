@@ -1,0 +1,36 @@
+#spring:
+#  jackson:
+#    serialization:
+#      indent-output: true
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/movie_db?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+#    username: root
+#    password: saiallala
+#  jpa:
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    database: MYSQL
+#    show-sql: true
+#    properties:
+#      hibernate.id.new_generator_mappings: false
+#
+#  server:
+#  port: 4200
+
+#---
+# thymeleaf:
+#    cache: false
+#    check-template: true
+#    check-template-location: true
+#    content-type: text/html
+#    enabled: true
+#    encoding: UTF-8
+#    mode: HTML
+#    prefix: classpath:/templates/
+# 
+#---
+# 
+#  suffix: .html
+#  
+#
+# 
+# 

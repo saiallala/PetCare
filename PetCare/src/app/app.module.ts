@@ -14,6 +14,7 @@ import { ContactInfoComponent } from './profile/contact-info/contact-info.compon
 import {FormsModule} from '@angular/forms';
 import { ViewAccountComponent } from './account/view-account/view-account.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
+import { PetService } from './services/pet.service';
 
 
 
@@ -22,8 +23,8 @@ const appRoutes: Routes =[
         { path: 'profile', component: ProfileComponent },
         { path: 'help', component: HelpComponent },
         { path: 'account', component: AccountComponent },
-        { path: 'viewAccount', component: ViewAccountComponent },
-        { path: 'createAccount', component: CreateAccountComponent },
+        { path: 'view-account', component: ViewAccountComponent },
+        { path: 'create-account', component: CreateAccountComponent },
         { path: 'health', component: HealthComponent },
         { path: 'contact', component: ContactInfoComponent }
 
@@ -40,13 +41,16 @@ const appRoutes: Routes =[
     HealthComponent,
     ContactInfoComponent,
     ViewAccountComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  exports: [
+      RouterModule
+  ],
+  providers: [PetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

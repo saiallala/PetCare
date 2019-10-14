@@ -21,3 +21,18 @@ label{
   padding-right: 300px;
   padding-left: 0px;
 }
+
+
+.help{
+  padding-top: 50px;
+  padding-bottom: 0px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.other{
+    padding-top: 00px;
+    padding-bottom: 0px;
+    padding-right: 500px;
+    padding-left: 50px;
+}
