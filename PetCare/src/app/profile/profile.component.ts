@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Pet } from './../model/pet';
+import { PetService } from './../services/pet.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+    pets: Pet[] = [];
+    pet: Pet;
 
-  ngOnInit() {
-  }
+      constructor(private petService: PetService) {
+
+      }
+      ngOnInit() {
+
+        this.petService.findById().subscribe(data => {
+            this.pets.push(data);
+            this.pet = data;
+        });
+    }
 
 }
