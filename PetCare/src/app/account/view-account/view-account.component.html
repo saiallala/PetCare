@@ -1,3 +1,25 @@
+
+
+<div class="container center">
+  <div class="row">
+    <div *ngIf="pet" class="col-sm-12">
+      <!-- why we need ngIf -->
+      <div class="container pic">
+          <div class="row">
+              <div class="col ">
+                  <img src ="https://image.cnbcfm.com/api/v1/image/105992231-1561667465295gettyimages-521697453.jpeg?v=1561667497&w=1910" height = 250px width = 250px/> <br>
+              </div>
+          </div>
+      </div>
+       {{pet.name}}, <br>
+       {{pet.gender}}, <br>
+       {{pet.age}}, <br>
+       {{pet.ownerName}} <br>
+
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
@@ -9,17 +31,9 @@
           <div class="col-sm-12">
 
             <div *ngFor="let pet of pets">
-                
+
               <table class="table table-borderless table-dark table-hover">
                 <tbody>
-                  <tr>
-                    <th>Name:</th>
-                    <th>{{pet.name}}</th>
-                  </tr>
-                  <tr>
-                    <th>Gender:</th>
-                    <th>{{pet.gender}}</th>
-                  </tr>
                   <tr>
                     <th>Type:</th>
                     <th>{{pet.type}}</th>
@@ -41,14 +55,6 @@
                     <th>{{pet.weight}}</th>
                   </tr>
                   <tr>
-                    <th>Age:</th>
-                    <th>{{pet.age}}</th>
-                  </tr>
-                  <tr>
-                    <th>Owner Name:</th>
-                    <th>{{pet.ownerName}}</th>
-                  </tr>
-                  <tr>
                     <th>Address:</th>
                     <th>{{pet.address}}</th>
                   </tr>
@@ -68,10 +74,25 @@
                 </tbody>
               </table>
             </div>
+        </div>
 
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+
+<!-- Profile view -->
+
+
+
+<!-- {{pet.species}} <br>
+{{pet.heightft}} <br>
+{{pet.heightin}} <br>
+{{pet.weight}} <br>
+{{pet.address}} <br>
+{{pet.phone}} <br>
+{{pet.primaryVet}} <br>
+{{pet.primaryVetPhone}} <br>
+{{pet.type}} <br>
+ -->

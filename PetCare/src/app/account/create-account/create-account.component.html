@@ -5,35 +5,83 @@
       <h1>Welcome! </h1>
       <h4> This is where your pet's account information is stored</h4>
       <div class="container">
-        <div class="row">
+        <div class="row" *ngIf="pet">
           <div class="col-sm-12">
+            <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+              <table class="table table-borderless table-dark table-hover">
+                <tbody>
+                  <tr>
+                    <th><label for="name"> Name: </label></th>
+                    <!-- #name is used to access the objects of the ngModel or the form -->
+                    <!-- ngModel will be used to property bind values to the input -->
+                    <th><input type="text" id="name" placeholder="Timmy" [ngModel] = "pet.name" name= "name" required #name = "ngModel">
+                    <span class = "help-block error" *ngIf="!name.valid && name.touched"> please enter the correct value </span></th>
+                  </tr>
+                  <tr>
+                    <th><label for="gender"> Gender: </label></th>
+                    <th><input type="text" id="gender" placeholder="Male" ngModel name=gender required> </th>
+                  </tr>
+                  <tr>
+                    <th><label for="type"> Type: </label></th>
+                    <th><input type="text" id="type" placeholder=" Dog Type" ngModel name=type required> </th>
+                  </tr>
+                  <tr>
+                    <th><label for="species"> Species: </label></th>
+                    <th><input type="text" id="species" placeholder="Dog Species" ngModel name=species required> </th>
+                  </tr>
 
-            <table class="table table-borderless table-dark table-hover">
-              <tbody>
-                <tr>
-                  <th><label for="username"> UserName: </label></th>
-                  <th><input type="text" id="username" placeholder="@tommy"> </th>
-                </tr>
-                <tr>
-                  <th><label for="email"> Email: </label></th>
-                  <th><input type="text" id="email" placeholder="Enter your  Email"></th>
-                </tr>
-                <tr>
-                  <th><label for="password"> Password: </label></th>
-                  <th><input type="password" id="password" placeholder="*********"></th>
-                </tr>
-                <tr>
-                  <th><label for="cpassword"> Confirm Password: </label></th>
-                  <th><input type="password" id="cpassword" placeholder="*********"></th>
-                </tr>
+                  <tr>
+                    <th><label for="heightft"> Height: </label></th>
+                    <th><input type="text" id="heightft" placeholder="4" ngModel name=heightft required> </th>
+                  </tr>
+                  <tr>
+                    <th><label for="weight"> Weight: </label></th>
+                    <th><input type="text" id="weight" placeholder="80" ngModel name=weight required> </th>
+                  </tr>
 
-              </tbody>
-            </table>
+                  <tr>
+                    <th><label for="age"> Name: </label></th>
+                    <th><input type="text" id="age" placeholder="12" ngModel name=age required> </th>
+                  </tr>
 
-            <div *ngFor = "let pet of pets">
-                {{pet.name}}
-            </div>
+                  <tr>
+                    <th><label for="owner"> Owner Name: </label></th>
+                    <th><input type="text" id="owner" placeholder="12" ngModel name=owner required> </th>
+                  </tr>
 
+                  <tr>
+                    <th><label for="address"> Address: </label></th>
+                    <th><input type="text" id="address" placeholder="12" ngModel name=address required> </th>
+                  </tr>
+
+                  <tr>
+                    <th><label for="phone"> Phone: </label></th>
+                    <th><input type="text" id="phone" placeholder="6093899273" ngModel name=phone required> </th>
+                  </tr>
+
+                  <tr>
+                    <th><label for="primaryVet"> Primary Vet: </label></th>
+                    <th><input type="text" id="primaryVet" placeholder="Sean Ken" ngModel name=primaryVet required> </th>
+                  </tr>
+
+                  <tr>
+                    <th><label for="primaryVetPhone"> Primary Vet Phone: </label></th>
+                    <th><input type="text" id="primaryVetPhone" placeholder="6397236829" ngModel name=primaryVetPhone required> </th>
+                  </tr>
+
+                  <tr>
+                      <button class = "btn btn-primary" type = "submit" [disabled] = "!f.valid">Create an Account</button>
+                  </tr>
+                </tbody>
+
+              </table>
+
+              <!-- <div class = "radio" *ngFor = "let gender of genders">
+              <label>
+                  <input type="radio" name = "gender" ngModel [value] = "gender"> {{pet.gender}}
+              </label>
+              </div> -->
+            </form>
           </div>
         </div>
       </div>
