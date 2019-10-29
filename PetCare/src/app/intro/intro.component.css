@@ -1,0 +1,31 @@
+.slider{
+    background-color: lightblue;
+    color: white;
+    margin-top: 100px;
+}
+.arrow:hover{
+    color: black;
+    background-color: lightgrey;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+    margin-left: 500px;
+}
+
+.black{
+    background-color: black;
+    color: white;
+}
+
+.cover-heading{
+    font-family:  Comic Sans MS;
+    font-size:  100px;
+}
+
+.cover-text{
+    font-family:  Comic Sans MS;
+    color: black;
+
+}
