@@ -8,16 +8,18 @@ import { PetService } from '../../services/pet.service';
   styleUrls: ['./view-account.component.css']
 })
 export class ViewAccountComponent implements OnInit {
-    @Input() petData;
+    // @Input() petData;
     pets: Pet[] = [];
+    pet: Pet;
+
       constructor(private petService: PetService) {
 
       }
-
       ngOnInit() {
+
         this.petService.findById().subscribe(data => {
-          this.pets.push(data);
-           console.log(this.pets);
+            this.pets.push(data);
+            this.pet = data;
         });
     }
 }
