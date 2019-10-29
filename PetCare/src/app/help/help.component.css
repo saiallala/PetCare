@@ -1,0 +1,10 @@
+.padding1{
+  padding-top: 50px;
+}
+.outline{
+    border-style: none;
+    /* border-color: none; */
+    background-color: #f0ad4e;
+    color: white;
+    border-radius: 7px;
+}
