@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 .account{
   padding-bottom: 200px;
   padding-right: 300px;
@@ -7,28 +8,4 @@
 
 .nav-bag-color{
     background-color: red;
-}
-
-h1{
-
-}
-
-h3{
-
-}
-
-label{
-
-}
-
-
-.help{
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 50px;
-}
-
-.other{
-    padding-left: 50px;
-    padding-right: 500px;
 }
