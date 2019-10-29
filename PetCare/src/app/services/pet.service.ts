@@ -8,19 +8,31 @@ import { Observable } from 'rxjs';
 })
 export class PetService {
 
+  public API = '//localhost:8080';
+  public PETCARE_API = this.API + '/petcare';
 
   constructor(private http: HttpClient) {
   }
 
   public findAll(): Observable<Pet[]> {
-    return this.http.get<Pet[]>('//localhost:8080/petcare/pets/');
+    return this.http.get<Pet[]>(this.PETCARE_API + '/pets');
   }
 
   public findById(): Observable<Pet>{
-      return this.http.get<Pet>('http://localhost:8080/petcare/pets/1')
+      return this.http.get<Pet>(this.PETCARE_API + '/pets/1');
   }
 
   public save(Pet: Pet) {
-    return this.http.post<Pet>('//localhost:8080/petcare/pets', Pet);
+    return this.http.post<Pet>(this.PETCARE_API + '/pets', Pet);
   }
+
+  // save(car: any): Observable<any> {
+  //   let result: Observable<Object>;
+  //   if (car['href']) {
+  //     result = this.http.put(car.href, car);
+  //   } else {
+  //     result = this.http.post(this.CAR_API, car);
+  //   }
+  //   return result;
+  // }
 }
