@@ -1,80 +1,67 @@
-<div style = "background: darkblue;">
-<h1 style = "color:red; text-align: center;">PetCare</h1>
-  <!-- NavBar for the Whole Application -->
-  <nav class="navbar navbar-expand-lg navbar-dark nav-bag-color">
-    <a class="navbar-brand" routerLink = "/" >PetCare</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<!-- NavBar for the Whole Application -->
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink = "/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink = "/account">Account</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Profile
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink = "/health">Health Info</a>
-            <a class="dropdown-item" routerLink = "/contact">Contact Info</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink = "/help">Help</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
+<nav class="navbar navbar-expand-lg nav-fill navbar-light nav-bag-color nav-font nav-bar-css d-flex justify-content-between  shadow">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse center" id="navbarSupportedContent">
+    <ul class="navbar-nav w-100 ">
+
+      <li class="nav-item lis">
+        <a class="nav-link" routerLink="/health">Health <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item lis">
+        <a class="nav-link" routerLink="/profile">Profile <span class="sr-only">(current)</span></a>
+      </li>
+      <li class=" nav-item lis">
+        <img src="/../../assets/petco.gif" height="70vw" routerLink="/home" alt="tdo">
+      </li>
+
+      <li class="nav-item lis">
+        <a class="nav-link" routerLink="/account">Account <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item lis">
+        <a class="nav-link" routerLink="/help">Help <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <ul>
+        <button type="button" class= "btn btn-secondary lis account-button" (click)="openLogin()">Login</button>
+    </ul>
+
+    <!-- <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form> -->
+
+  </div>
 </nav>
 
-  <router-outlet></router-outlet>
 
-  <!-- Home Page -->
-  <!-- <app-home> </app-home> -->
 
-  <!-- Help Page -->
-  <!-- <app-help> </app-help> -->
+<router-outlet></router-outlet>
+<!-- <button type="button" name="button" (click)="test()">SHDNFLDJNFAKJDNAGKJ</button> -->
 
-  <!-- Account information -->
-  <!-- <app-account></app-account> -->
-
-  <!-- Profile -->
-  <div style = "background: grey">
-  <footer class="page-footer font-small">
 <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+
+
+        </div>
+    </div>
+</div>
+<div class="container-flex">
     <br>
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-light">Links</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-
-        <hr class="clearfix w-100 d-md-none">
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3 text-light">© 2019 Copyright:
-      <a href="https://techwaves.home.blog"> techWaves.com</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  <div class="row footer">
+    <div class="col">
+      <div>© 2019 TechWaves | TeachWaves LLC, All rights reserved.</div>
+      <div> 110 Allen rd | Basking Ridge | New Jersey | 08854 | USA </div>
     </div>
-    </div>
-    <!-- Copyright -->
-  </footer>
+  </div>
 </div>

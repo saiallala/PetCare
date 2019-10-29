@@ -1,0 +1,98 @@
+<div class="container center">
+  <div class="row">
+    <div *ngIf="pet" class="col-sm-12">
+      <!-- why we need ngIf -->
+      <div class="container jumbotron name">
+        <div class="row">
+          <div class="col ">
+            <img src="https://image.cnbcfm.com/api/v1/image/105992231-1561667465295gettyimages-521697453.jpeg?v=1561667497&w=1910" height=250px width=250px /> <br>
+          </div>
+        </div>
+        {{pet.name}} <br>
+        {{pet.age}} <br>
+        {{pet.ownerName}}<br>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>Welcome! </h1>
+      <h4 style="color:white;"> This is where your pet's account information is stored</h4>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+
+            <div *ngFor="let pet of pets">
+
+              <table class="table table-borderless table-dark table-hover">
+                <tbody>
+                  <tr>
+                    <th>Type:</th>
+                    <th>{{pet.type}}</th>
+                  </tr>
+                  <tr>
+                    <th>Sepcies</th>
+                    <th>{{pet.species}}</th>
+                  </tr>
+                  <tr>
+                    <th>Height Ft:</th>
+                    <th>{{pet.heightft}}</th>
+                  </tr>
+                  <tr>
+                    <th>Height in:</th>
+                    <th>{{pet.heightin}}</th>
+                  </tr>
+                  <tr>
+                    <th>Weight lbs:</th>
+                    <th>{{pet.weight}}</th>
+                  </tr>
+                  <tr>
+                    <th>Address:</th>
+                    <th>{{pet.address}}</th>
+                  </tr>
+                  <tr>
+                    <th>Phone Number:</th>
+                    <th>{{pet.phone}}</th>
+                  </tr>
+                  <tr>
+                    <th>primary Vet:</th>
+                    <th>{{pet.primaryVet}}</th>
+                  </tr>
+                  <tr>
+                    <th>Primary Vet Number:</th>
+                    <th>{{pet.primaryVetPhone}}</th>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Profile view -->
+
+
+
+<!-- {{pet.species}} <br>
+{{pet.heightft}} <br>
+{{pet.gender}} <br>
+
+{{pet.heightin}} <br>
+{{pet.weight}} <br>
+{{pet.address}} <br>
+{{pet.phone}} <br>
+{{pet.primaryVet}} <br>
+{{pet.primaryVetPhone}} <br>
+{{pet.type}} <br>
+ -->

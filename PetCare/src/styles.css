@@ -1,23 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-.nav-bag-color{
-    background-color: darkblue;
-}
-
-h1{
-    color:white;
-}
-
-h3{
-    color: white;
-}
-
-label{
-    color: white;
-}
-
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 .account{
-  padding-top: 200px;
   padding-bottom: 200px;
   padding-right: 300px;
-  padding-left: 0px;
+  padding-top: 200px;
+}
+
+.nav-bag-color{
+    background-color: red;
 }

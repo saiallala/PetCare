@@ -1,0 +1,7 @@
+.account{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    padding: 70px 94px;
+
+}
